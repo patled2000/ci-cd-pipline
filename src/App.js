@@ -5,14 +5,12 @@ import ResponsiveSlider from './componet/heroslider';
 import AboutPage from './componet/about';
 import WhyChoose from './componet/WhyChoose';
 import ProductSection from './componet/ProductSection';
-import GallerySection from './componet/GallerySection';
+ 
 import DealershipSection from './componet/DealershipSection';
 import MapSection from './componet/MapSection';
-import TextSlider from './componet/TextSlider';
-import Testimonials from './componet/Testimonials';
-import Process from './componet/Process';
+ 
 import FAQSection from './componet/FAQSection';
-import Slider from './componet/Slider';
+ 
 import Footer from './componet/Footer';
 import GallerySlider from './componet/GallerySection';
 import Categories from './componet/Categories';
