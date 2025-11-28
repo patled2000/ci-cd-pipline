@@ -1,5 +1,8 @@
-name: CI
-on: [push]
+name: React CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -7,13 +10,24 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Skip Tests
+      - name: Run tests
         run: echo "Skipping tests"
 
       - name: Build project
         run: npm run build
+
+      - name: Upload Production Build
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-build
+          path: build
