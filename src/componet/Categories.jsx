@@ -5,7 +5,7 @@ import cat2 from "../assets/image/DSC01572.webp";
 import cat3 from "../assets/image/DSC01386.webp";
 import cat4 from "../assets/image/DSC01636.webp";
 import cat5 from "../assets/image/DSC01391.webp";
-import cat6 from "../assets/image/DSC01749.webp";
+
 
 const categories = [
   { id: 1, image: cat1, title: "Masala Sticks" },

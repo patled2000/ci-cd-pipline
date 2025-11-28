@@ -4,8 +4,7 @@ import "../Style/productSection.css";
 // Product Images
 import agarbati1 from '../assets/image/DSC01372.webp';
 import agarbati2 from '../assets/image/DSC01391.webp';
-import agarbati3 from '../assets/image/DSC01749.webp';
-import agarbati4 from '../assets/image/DSC01636.webp';
+ 
 
 // Product Data
 const products = [

@@ -1,7 +1,7 @@
  import React from "react";
 import "../Style/footer.css";
 import logo from "../assets/image/logo.png";
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp,  } from "react-icons/fa";
 
 const Footer = () => {
   return (

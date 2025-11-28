@@ -9,17 +9,16 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleScroll = () => {
-    setLastScrollY(prev => {
-      if (window.scrollY > prev) setVisible(false);
-      else setVisible(true);
-      return window.scrollY;
-    });
+    if (window.scrollY > lastScrollY) setVisible(false);
+    else setVisible(true);
+
+    setLastScrollY(window.scrollY);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <header className={`header ${visible ? "show" : "hide"}`}>
