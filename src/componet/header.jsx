@@ -1,4 +1,4 @@
- import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect, useCallback } from "react";
 import "../Style/Header.css";
 import { IoMenu, IoClose } from "react-icons/io5";
 import logo from "../assets/image/logo.png";
@@ -8,17 +8,18 @@ const Header = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const handleScroll = () => {
+  // Wrap in useCallback to fix useEffect dependency warning
+  const handleScroll = useCallback(() => {
     if (window.scrollY > lastScrollY) setVisible(false);
     else setVisible(true);
 
     setLastScrollY(window.scrollY);
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [handleScroll]); // dependency included
 
   return (
     <header className={`header ${visible ? "show" : "hide"}`}>
