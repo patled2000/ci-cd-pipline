@@ -1,0 +1,110 @@
+ /* ================================
+   GLOBAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================================
+   ABOUT SECTION
+================================ */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;                 /* Full width */
+  max-width: 100%;             /* Full width */
+  padding: 80px ;
+  gap: 40px;
+  background-color: white;
+  color: #063630;
+}
+
+/* Both sides equal width */
+.about-image,
+.about-content {
+  flex: 1;                      /* 50% - 50% layout */
+}
+
+/* IMAGE */
+.about-image img {
+  width: 100%;                  /* Full Width */
+  height: 100%;                 /* Full Height inside */
+  object-fit: cover;            /* Perfect fill */
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* CONTENT */
+.about-content h2 {
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #063630;
+}
+
+.about-content h3 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: justify;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* Tablet & small screens */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 60px 40px;
+    gap: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;     /* Stack vertically */
+    padding: 40px 20px;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-content h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .about-content p {
+    text-align:  inherit;
+    font-size: 15px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;               /* correct scaling for mobile */
+  }
+}

@@ -1,0 +1,25 @@
+ .text-slider-section {
+  padding: 40px 20px;
+  background-color: #fdf6ed;
+  overflow: hidden;
+}
+
+.slide-text {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #d59f33;
+  padding: 18px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+@media(max-width: 600px) {
+  .slide-text {
+    font-size: 20px;
+    padding: 14px 25px;
+  }
+}

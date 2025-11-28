@@ -1,0 +1,139 @@
+ /* ============================== */
+/* CATEGORY SECTION */
+/* ============================== */
+.category-section {
+  width: 100%;
+  padding: 80px;
+  text-align: center;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.cat-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c48217;
+  margin-bottom: 40px;
+}
+
+/* Container */
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Category Box (Desktop / Tablet / Laptop = 5 per row) */
+.category-box {
+  flex: 1 1 calc(20% - 40px);
+  max-width: calc(20% - 40px);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+  transform: scale(1.05);
+}
+
+.category-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #c48217;
+  transition: transform 0.3s ease;
+}
+
+.category-name {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #063630;
+  word-break: break-word;
+}
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .category-section {
+    padding: 70px 40px;
+  }
+
+  .category-box {
+    flex: 1 1 calc(20% - 30px);
+    max-width: calc(20% - 30px);
+  }
+
+  .category-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cat-heading {
+    font-size: 28px;
+  }
+
+  .category-name {
+    font-size: 18px;
+  }
+}
+
+/* Mobile = 3 per row */
+@media (max-width: 768px) {
+  .category-section {
+    padding: 60px 20px;
+  }
+
+  .category-container {
+    gap: 15px;
+  }
+
+  .category-box {
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+  }
+
+  .category-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cat-heading {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .category-name {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .category-container {
+    gap: 10px;
+  }
+
+  .category-box {
+    flex: 1 1 calc(33.33% - 10px);
+  }
+
+  .category-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cat-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .category-name {
+    font-size: 12px;
+  }
+}

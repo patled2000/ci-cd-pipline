@@ -1,0 +1,52 @@
+# Creating responsive React hero component, CSS, and an SVG hero image for the user.
+# Files created:
+# - /mnt/data/hero-image.svg
+# - /mnt/data/Hero.jsx
+# - /mnt/data/hero.css
+#
+# After this cell runs, links to the files will be provided in the assistant message.
+
+svg = '''<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f9f2e9"/>
+      <stop offset="50%" stop-color="#fff8f0"/>
+      <stop offset="100%" stop-color="#f3e9df"/>
+    </linearGradient>
+    <linearGradient id="smokeGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d59f33" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#063630" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+
+  <!-- soft smoky shapes -->
+  <g filter="url(#blur)">
+    <path d="M200 700 C300 600, 350 450, 450 420 C600 380, 700 420, 900 360 C1080 310, 1200 380, 1400 400 L1400 900 L0 900 Z"
+          fill="url(#smokeGrad)" opacity="0.9"/>
+    <path d="M0 600 C150 520, 300 480, 460 520 C650 570, 820 500, 1000 520 C1180 540, 1320 620, 1600 600 L1600 900 L0 900 Z"
+          fill="#efe0d0" opacity="0.6"/>
+  </g>
+
+  <!-- incense-stick illustration -->
+  <g transform="translate(80,520) scale(1.0)">
+    <rect x="0" y="0" width="520" height="18" rx="9" fill="#7b4b2f"/>
+    <rect x="490" y="-10" width="18" height="40" rx="5" fill="#d59f33" transform="rotate(-8 499 10)"/>
+    <g transform="translate(480,-30)">
+      <ellipse cx="24" cy="0" rx="60" ry="30" fill="#fff1e6" opacity="0.25"/>
+      <path d="M10 -10 C20 -50, 60 -80, 70 -120 C80 -160, 40 -200, 20 -230" stroke="#c48217" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M30 -20 C40 -60, 80 -90, 90 -130" stroke="#063630" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.35"/>
+    </g>
+  </g>
+
+  <!-- subtle logo/text area -->
+  <g transform="translate(60,80)">
+    <text x="0" y="0" font-family="Poppins, sans-serif" font-size="36" fill="#c48217" font-weight="700">Sharda Industries</text>
+    <text x="0" y="48" font-family="Poppins, sans-serif" font-size="20" fill="#063630">Natural incense • Since 2014</text>
+  </g>
+</svg>

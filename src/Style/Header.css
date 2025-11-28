@@ -1,0 +1,190 @@
+ /* ============================================= */
+/* RESET & BASE STYLES */
+/* ============================================= */
+
+/* Header.css ke top me ya global CSS me add kare */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+ 
+ 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* ============================================= */
+/* HEADER */
+/* ============================================= */
+.header {
+  width: 100%;
+  background: #063630;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: top 0.4s ease, padding 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.header.hide { top: -120px; }
+.header.show { top: 0; }
+
+/* ============================================= */
+/* HEADER CONTAINER */
+/* ============================================= */
+.header .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; /* Desktop height */
+}
+
+/* ============================================= */
+/* LOGO */
+/* ============================================= */
+.logo-img {
+  width: 105px;
+  max-width: 100%;
+  display: block;
+  transition: width 0.3s ease;
+}
+
+/* ============================================= */
+/* NAVIGATION */
+/* ============================================= */
+.nav {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Hover underline animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #D59F33;
+  transition: width 0.3s ease;
+}
+
+/* Hover arrow animation */
+.nav a::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: opacity 0.3s, right 0.3s;
+}
+
+.nav a:hover::after { width: 100%; }
+.nav a:hover::before { opacity: 1; right: -5px; }
+
+/* ============================================= */
+/* MOBILE MENU ICON */
+/* ============================================= */
+.menu-icon {
+  display: none;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* ============================================= */
+/* MOBILE SIDEBAR MENU */
+/* ============================================= */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: #063630;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.4s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.mobile-menu.open { right: 0; }
+
+.mobile-menu a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff45;
+  padding: 10px 0;
+  line-height: 1.6;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 33px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ============================================= */
+/* RESPONSIVE STYLES */
+/* ============================================= */
+
+/* Laptop / Large Tablets */
+@media(max-width: 1024px) {
+  .logo-img { width: 90px; }
+  .nav a { font-size: 17px; gap: 50px; }
+}
+
+/* Tablet & Mobile */
+@media(max-width: 768px) {
+  .header .container {
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .logo-img { width: 80px; }
+  .nav { display: none; }
+  .menu-icon { display: flex; font-size: 28px; }
+}
+
+/* Small Phones */
+@media(max-width: 480px) {
+  .header .container { height: 45px; }
+  .logo-img { width: 70px; }
+  .menu-icon { font-size: 30px; margin-top: 15px; }
+  .mobile-menu { width: 85%; max-width: 280px; padding: 70px 16px; gap: 18px; }
+  .mobile-menu a { font-size: 16px; padding: 8px 0; }
+}
