@@ -1,7 +1,7 @@
  import logo from './logo.svg';
 import './App.css';
 import Header from './componet/header';
-import ResponsiveSlider from './componet/heroslider';
+ 
 import AboutPage from './componet/about';
 import WhyChoose from './componet/WhyChoose';
 import ProductSection from './componet/ProductSection';
