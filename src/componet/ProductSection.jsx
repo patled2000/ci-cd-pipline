@@ -37,7 +37,7 @@ const products = [
     id: 4,
     category: "Dhoopbatti",
     title: "Premium Dhoop Stick",
-    desc: "Relaxing incense for home & temple.",
+    desc: "Relaxing  .",
     rate: "₹350 / pack",
     images: [agarbati1, agarbati2,  ],
   },
